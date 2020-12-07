@@ -5,3 +5,13 @@ export interface Person{
 }
 
 export const MAGIC_NUMBER : number = Math.round(Math.random() * 100);
+
+class NewClass{}
+
+export class MyClass{
+    protected getFortune(){
+        return "Today is your lucky day";
+    }
+}
+
+export function myFunction(){}

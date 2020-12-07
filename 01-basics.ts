@@ -152,9 +152,9 @@
 
     // Classes
 
-    import { Person, MAGIC_NUMBER } from './person';
+    import { Person, MAGIC_NUMBER, MyClass } from './person';
 
-    class Student{
+    class Student extends MyClass{
         // private firstName : string;
         // private lastName : string;
         // private age : number;
@@ -167,7 +167,9 @@
 
         // constructor(private firstName : string, private lastName : string, private age : number){}
 
-        constructor(private person : Person){}
+        constructor(private person : Person){
+            super();
+        }
 
         public getDetails() : string{
             // return this.firstName + " " + this.lastName;
@@ -188,3 +190,32 @@
 
 
 
+    // Decorators - simple functions with configurable objects
+    // - Class
+        // - Component -> ES6 class + @Component({})
+        // - Directive -> ES6 class + @Directive({})
+        // - Pipe -> ES6 class + @Pipe({})
+        // - Service -> ES6 class + @Injectable({})
+        // - Module -> ES6 class + @NgModule({})
+    // - Method
+        // - @HostListener({})
+    // - Property
+        // - @Input() / @Output()
+    // - Parameter
+        // - @Inject()
+
+
+
+        // Type System - 
+            // - void
+            // - any
+            // - enum
+
+
+        class A{}
+        class B{}
+        class C{
+            constructor(private a : A, private b : B){}
+        }
+
+        new C(new A(), new B());
